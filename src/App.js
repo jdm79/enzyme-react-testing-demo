@@ -10,8 +10,8 @@ class App extends Component {
     }
   }
 
-  incrementCount = () => { 
-    console.log("hello world");
+  incrementCount = () => {
+    this.setState({count: this.state.count +1 })
   }
 
 
