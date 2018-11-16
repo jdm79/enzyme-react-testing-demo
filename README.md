@@ -8,9 +8,9 @@ For the Jest tests, I'm using the inbuilt expect assertions which can be found [
 
 # How to install
 
-'''
+```
 $ git clone git@github.com:jdm79/enzyme-react-testing-demo.git
 $ cd enzyme-react-testing-demo
 $ npm test
 $ npm start (if you want to see the app running in the browser)
-'''
+```
