@@ -56,5 +56,17 @@ test('counter starts at 0', () => {
 // testing that it affects the display is better directly checking the state
 // less about the implementation, more about the behaviour
 test('clicking button increments counter display', () => {
+  const counter = 7;
+  const wrapper = setup(null, { counter });
+
+  // find button and click
+  const button = findByTestAttr(wrapper, "increment-button");
+  button.simulate('click');
+  wrapper.update();
+
+  // find display and test value
+  const counterDisplay = findByTestAttr(wrapper, "counter-display");
+  // don't test the actual text, but the changed variable
+  expect(counterDisplay.text()).toContain(counter +1)
 
 })
