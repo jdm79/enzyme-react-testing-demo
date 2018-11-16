@@ -6,6 +6,8 @@ This small project works with a Create React App (CRA) and strips it bare, write
 
 For the Jest tests, I'm using the inbuilt expect assertions which can be found [here](https://jestjs.io/docs/en/expect).
 
+To simulate clicks and things, go [here](https://airbnb.io/enzyme/docs/api/ShallowWrapper/simulate.html) for some Enzyme docs and examples.
+
 When testing, it's important to test the behaviour rather than the implemention - the how - as this can lead to brittle tests that will fail when you change/refactor your code to do the same thing. Ultimately we want to be testing that the data is passed from a to b, for example, rather than how it got from a to b. The aim is not to rewrite tests after a refactor.
 
 # How to install
