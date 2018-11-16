@@ -17,21 +17,31 @@ const setup = (props ={}, state=null) => {
   return shallow(<App {...props} />)
 }
 
+/**
+ * return ShallowWraper containing node(s) with the given data-test value.
+ * @param {ShallowWrapper} wrapper - Enzyme shallow wrapper to search within.
+ * @param {string} value - Value of data-test attribute for search.
+ * @returns {ShallowWrapper}
+ */
+const findByTestAttr = (wrapper, value) => {
+  return wrapper.find(`[data-test="${value}"]`)
+}
+
 test('renders without error', () => {
   const wrapper = setup();
-  const appComponent = wrapper.find('[data-test="component-app"]');
+  const appComponent = findByTestAttr(wrapper, "component-app");
   expect(appComponent.length).toBe(1)
 })
 
 test('renders increment button', () => {
   const wrapper = setup();
-  const button = wrapper.find('[data-test="increment-button"]');
+  const button = findByTestAttr(wrapper, "increment-button");
   expect(button.length).toBe(1)
 })
 
 test('displays our counter', () => {
   const wrapper = setup();
-  const counterDisplay = wrapper.find('[data-test="counter-display"]');
+  const counterDisplay = findByTestAttr(wrapper, "counter-display");
   expect(counterDisplay.length).toBe(1)
 })
 
