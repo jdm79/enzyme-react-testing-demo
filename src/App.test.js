@@ -12,7 +12,9 @@ test('renders without error', () => {
 })
 
 test('renders increment button', () => {
-
+  const wrapper = shallow(<App />);
+  const button = wrapper.find('[data-test="increment-button"]');
+  expect(button.length).toBe(1)
 })
 
 test('displays our counter', () => {
