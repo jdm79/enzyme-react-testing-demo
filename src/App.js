@@ -5,7 +5,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      message: "hello world"
+      message: "The count is: ",
+      count: 0
     }
   }
 
@@ -13,7 +14,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>{this.props.title}</h1>
-        <h2>{this.state.message} oo</h2>
+        <h2>{this.state.message} {this.state.count}</h2>
       </div>
     );
   }
