@@ -10,11 +10,17 @@ class App extends Component {
     }
   }
 
+  incrementCount = () => { 
+    console.log("hello world");
+  }
+
+
   render() {
     return (
       <div className="App">
         <h1>{this.props.title}</h1>
         <h2>{this.state.message} {this.state.count}</h2>
+        <button onClick={this.incrementCount}>Increment Counter</button>
       </div>
     );
   }
