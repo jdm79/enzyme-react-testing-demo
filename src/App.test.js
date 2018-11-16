@@ -12,7 +12,6 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
  * @param {any} state - Initial state for setup
  * @returns {ShallowWrapper}
  */
-
 const setup = (props ={}, state=null) => {
   return shallow(<App {...props} />)
 }
@@ -47,7 +46,9 @@ test('displays our counter', () => {
 
 // this is testing state, but meh for now
 test('counter starts at 0', () => {
-
+  const wrapper = setup();
+  const initialCounterState = wrapper.state('counter');
+  expect(initialCounterState).toBe(0)
 })
 
 // testing that it affects the display is better directly checking the state
