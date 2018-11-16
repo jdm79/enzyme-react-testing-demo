@@ -8,3 +8,7 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 test('renders without error', () => {
 
 })
+
+test('renders increment button', () => {
+  
+})
