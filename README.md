@@ -13,6 +13,7 @@ When testing, it's important to test the behaviour rather than the implemention 
 ```
 $ git clone git@github.com:jdm79/enzyme-react-testing-demo.git
 $ cd enzyme-react-testing-demo
+$ npm install
 $ npm test
 $ npm start (if you want to see the app running in the browser)
 ```
