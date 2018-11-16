@@ -18,7 +18,9 @@ test('renders increment button', () => {
 })
 
 test('displays our counter', () => {
-
+  const wrapper = shallow(<App />);
+  const counterDisplay = wrapper.find('[data-test="counter-display"]');
+  expect(counterDisplay.length).toBe(1)
 })
 
 // this is testing state, but meh for now
